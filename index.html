@@ -8,29 +8,60 @@
     <title>login/register</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./index.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* 隐藏页面滚动条 */
+        }
+
+        video {
+            position: fixed; /* 固定在屏幕上 */
+            top: 0;
+            left: 0;
+            width: 100%; /* 100% 宽度 */
+            height: 100%; /* 100% 高度 */
+            object-fit: cover; /* 等比例缩放视频以填充容器 */
+            z-index: -1; /* 将视频放置在所有其他内容之后 */
+        }
+
+        .container {
+            position: relative; /* 使内容位于视频上方 */
+            z-index: 1; /* 保持在视频前面 */
+            color: white; /* 设置内容颜色为白色，以确保在视频背景上可见 */
+        }
+    </style>
 </head>
 
 <body>
+    <video autoplay muted loop>
+        <source src="Fly Above Clouds Loopabe.mp4" type="video/mp4">
+        <!-- 其他视频格式的源 -->
+        <!-- <source src="your-video.webm" type="video/webm"> -->
+        <!-- <source src="your-video.ogv" type="video/ogg"> -->
+        Your browser does not support the video tag.
+    </video>
+
     <!-- login/register container -->
     <div class="container">
         <!-- register -->
         <div class="form-container sign-up-container">
             <div class="form">
-                <h2>sign up</h2>
+                <h2>注册</h2>
                 <input type="text" name="username" id="username" placeholder="Username...">
                 <input type="email" name="emal" id="email" placeholder="Email...">
                 <input type="password" name="password" id="password" placeholder="Password...">
-                <button class="signUp">sign up</button>
+                <button class="signUp">注册</button>
             </div>
         </div>
         <!-- login -->
         <div class="form-container sign-in-container">
             <div class="form">
-                <h2>sign in</h2>
+                <h2>登录</h2>
                 <input type="email" name="emal" id="email" placeholder="Email...">
                 <input type="password" name="password" id="password" placeholder="Password...">
-                <a href="#" class="forget-password">forget your password</a>
-                <button class="signIn">sign in</button>
+                <a href="#" class="forget-password">忘记密码</a>
+                <button class="signIn">登录</button>
             </div>
         </div>
         <!-- overlay container -->
@@ -38,20 +69,19 @@
             <div class="overlay">
                 <!-- overlay left -->
                 <div class="overlay_panel overlay_left_container">
-                    <h2>welcome back!</h2>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button id="sign-in">sign in</button>
+                    <h2>欢迎来到比特闪耀</h2>
+                    <p>为了与我们保持联系，请使用您的个人信息登录</p>
+                    <button id="sign-in">登录</button>
                 </div>
                 <!-- overlay right -->
                 <div class="overlay_panel overlay_right_container">
-                    <h2>hello friend!</h2>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button id="sign-up">sign up</button>
+                    <h2>你好 世界</h2>
+                    <p>输入您的个人详细信息并开始我们的旅程</p>
+                    <button id="sign-up">注册</button>
                 </div>
             </div>
         </div>
     </div>
-
 
     <script src="./index.js"></script>
 </body>

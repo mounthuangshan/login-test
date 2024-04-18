@@ -66,11 +66,11 @@ input {
 
 .forget-password:hover {
     color: lightslategray;
-    border-bottom: 2px solid #ff4b2b;
+    border-bottom: 2px solid #004aad;
 }
 
 button {
-    background: #ff4b2b;
+    background: #004aad;
     padding: 10px 50px;
     border: 1px solid transparent;
     border-radius: 20px;
@@ -101,7 +101,7 @@ button:active {
     width: 200%;
     height: 100%;
     left: -100%;
-    background-color: #ff4b2b;
+    background-color: #004aad;
 }
 
 .overlay_panel {
